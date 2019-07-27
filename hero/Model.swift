@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 var events: [Event] = []
+var currentEvent: Event? = nil
 
 struct Event: Codable{
 	var icon: String
@@ -17,6 +18,8 @@ struct Event: Codable{
 	let org: String
 	let description: String
 	let address: String
+	let tag: String
+	let time: String
 	struct funding: Codable {
 		var name: String
 		var target: Int
@@ -24,7 +27,6 @@ struct Event: Codable{
 	}
 	let fundings: [funding]
 	let org_link:String
-	//	var largeImage: String
 }
 
 

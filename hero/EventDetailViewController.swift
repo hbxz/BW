@@ -8,23 +8,37 @@
 
 import UIKit
 
-class EventDetailViewController: UIViewController {
+class EventDetailViewController: UITableViewController {
+	@IBOutlet weak var imageView: UIImageView!
+	@IBOutlet weak var titleLabel: UILabel!
+	@IBOutlet weak var initiatorNameLabel: UILabel!
+	@IBOutlet weak var descriptionLable: UILabel!
 
-    override func viewDidLoad() {
+	override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		setup()
     }
-    
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	func setup() {
+		let event = currentEvent!
+		if let img = UIImage(named: event.icon) {
+			imageView.image = img
+		} else {
+			imageView.image = UIImage(named: "Placeholder")
+		}
+		titleLabel.text = event.title
+		initiatorNameLabel.text = event.org
+		descriptionLable.text = event.description
+	}
+
+	@IBAction func donateBtnTaped(_ sender: UIButton) {
+		let event = currentEvent!
+		print(event.org_link)
+		if let url = URL(string: event.org_link) {
+			UIApplication.shared.open(url)
+		}
+
+	}
 
 }

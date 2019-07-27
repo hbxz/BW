@@ -10,6 +10,7 @@ import UIKit
 
 private let eventCellID = "EventCell"
 
+
 class EventBrowserViewController: UIViewController {
 	@IBOutlet weak var tableView: UITableView!
 
@@ -17,13 +18,11 @@ class EventBrowserViewController: UIViewController {
         super.viewDidLoad()
 
 		loadDemoData()
+		print(events)
 
 		let cellNib = UINib(nibName: eventCellID, bundle: nil)
 		tableView.register(cellNib, forCellReuseIdentifier: eventCellID)
 		tableView.rowHeight = 350
-//		if UIDevice.current.userInterfaceIdiom != .pad {
-//			searchBar.becomeFirstResponder()
-//		}
     }
 
     /*
@@ -57,34 +56,9 @@ extension EventBrowserViewController: UITableViewDataSource {
 
 // MARK: UICollectionViewDelegate
 extension EventBrowserViewController: UITableViewDelegate {
-	/*
-	// Uncomment this method to specify if the specified item should be highlighted during tracking
-	override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-	return true
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+		currentEvent = events[indexPath.row]
+		self.performSegue(withIdentifier: "goDetailPage", sender: tableView)
 	}
-	*/
-
-	/*
-	// Uncomment this method to specify if the specified item should be selected
-	override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-	return true
-	}
-	*/
-
-	/*
-	// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-	override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-	return false
-	}
-
-	override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-	return false
-	}
-
-	override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-
-	}
-	*/
-
-
 }
