@@ -26,25 +26,7 @@ class ViewController: UIViewController {
 	}
 
 	@IBAction func tui(_ sender: Any) {
-		test_Alamofire()
-	}
-	func test_Alamofire() {
-		AF.request("https://api.crossref.org/works/10.1037/0003-066X.59.1.29/agency").responseJSON { response in
-			print("Request: \(String(describing: response.request))")   // original url request
-			print()
-			print("Response: \(String(describing: response.response))") // http url response
-			print()
-			print("Result: \(response.result)")                         // response serialization result
-
-
-			if let json = response.result.value {
-				print("JSON: \(json)") // serialized json response
-			}
-
-//			if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-//				print("Data: \(utf8Text)") // original server data as UTF8 string
-//			}
-		}
+//		test_Alamofire()
 	}
 }
 
