@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +15,61 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BW-logo" translatesAutoresizingMaskIntoConstraints="NO" id="wyp-1M-ARD">
+                                <rect key="frame" x="0.0" y="129" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wyp-1M-ARD" secondAttribute="height" multiplier="1:1" id="AgT-aa-toX"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3A-4D-8EG">
+                                <rect key="frame" x="0.0" y="543" width="414" height="319"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4I-hV-VN7">
+                                        <rect key="frame" x="142" y="93.5" width="130" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foR-bG-0ZY">
+                                        <rect key="frame" x="41.5" y="139.5" width="331" height="79.5"/>
+                                        <string key="text">A platform to connect donors and charity to efficiently redistribute resources. Together, we can spread the fortune and make the world better.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="foR-bG-0ZY" firstAttribute="width" secondItem="r3A-4D-8EG" secondAttribute="width" multiplier="0.8" id="LD6-jD-MvP"/>
+                                    <constraint firstItem="n4I-hV-VN7" firstAttribute="centerY" secondItem="r3A-4D-8EG" secondAttribute="centerY" multiplier="0.7" id="axE-6Z-D2L"/>
+                                    <constraint firstItem="foR-bG-0ZY" firstAttribute="top" secondItem="n4I-hV-VN7" secondAttribute="bottom" constant="10" id="dVx-mh-SnS"/>
+                                    <constraint firstItem="n4I-hV-VN7" firstAttribute="centerX" secondItem="r3A-4D-8EG" secondAttribute="centerX" id="eLr-Vz-fjW"/>
+                                    <constraint firstItem="foR-bG-0ZY" firstAttribute="centerX" secondItem="r3A-4D-8EG" secondAttribute="centerX" id="rbX-0q-ZOh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wyp-1M-ARD" secondAttribute="trailing" id="8Ib-Fq-Xun"/>
+                            <constraint firstItem="wyp-1M-ARD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.75" id="k7T-wg-4m7"/>
+                            <constraint firstItem="r3A-4D-8EG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mU9-Cv-Slw"/>
+                            <constraint firstItem="r3A-4D-8EG" firstAttribute="top" secondItem="wyp-1M-ARD" secondAttribute="bottom" id="pt6-Lx-D6B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r3A-4D-8EG" secondAttribute="trailing" id="qk1-K6-Vvr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r3A-4D-8EG" secondAttribute="bottom" id="rbY-2T-KT1"/>
+                            <constraint firstItem="wyp-1M-ARD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xZN-Ou-DBA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BW-logo" width="977" height="1265"/>
+    </resources>
 </document>
