@@ -14,11 +14,11 @@ private let eventCellID = "EventCell"
 class EventBrowserViewController: UIViewController {
 	@IBOutlet weak var tableView: UITableView!
 
-    override func viewDidLoad() {
+
+	override func viewDidLoad() {
         super.viewDidLoad()
 
 		loadDemoData()
-		print(events)
 
 		let cellNib = UINib(nibName: eventCellID, bundle: nil)
 		tableView.register(cellNib, forCellReuseIdentifier: eventCellID)
@@ -39,11 +39,15 @@ class EventBrowserViewController: UIViewController {
 
 // MARK: UICollectionViewDataSource
 extension EventBrowserViewController: UITableViewDataSource {
+
+
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return events.count
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+
 		let cell = tableView.dequeueReusableCell(
 			withIdentifier: eventCellID,
 			for: indexPath) as! EventCell

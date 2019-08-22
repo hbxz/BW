@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5C3B4E9DD3AC50A7646ECCCA /* Pods_hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64546877B0DA0E42C231DAEA /* Pods_hero.framework */; };
+		9635A20622EDA6E90066D5CA /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 9635A20522EDA6E90066D5CA /* awsconfiguration.json */; };
 		9649DA5E22EC854200481BAA /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9649DA5D22EC854200481BAA /* EventDetailViewController.swift */; };
 		9649DA6022EC9D7500481BAA /* fakeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9649DA5F22EC9D7500481BAA /* fakeData.json */; };
 		96AF25B322EC315000DC73E8 /* EventBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AF25B222EC315000DC73E8 /* EventBrowserViewController.swift */; };
@@ -25,6 +26,7 @@
 		29E2FED0FE2BE35A63EAC3C2 /* Pods-hero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hero.debug.xcconfig"; path = "Target Support Files/Pods-hero/Pods-hero.debug.xcconfig"; sourceTree = "<group>"; };
 		35DF98FE2CAB28DD3FAAC679 /* Pods-hero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hero.release.xcconfig"; path = "Target Support Files/Pods-hero/Pods-hero.release.xcconfig"; sourceTree = "<group>"; };
 		64546877B0DA0E42C231DAEA /* Pods_hero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9635A20522EDA6E90066D5CA /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 		9649DA5D22EC854200481BAA /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		9649DA5F22EC9D7500481BAA /* fakeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fakeData.json; path = static/fakeData.json; sourceTree = SOURCE_ROOT; };
 		96AF25B222EC315000DC73E8 /* EventBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBrowserViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,9 @@
 		96AF25AF22EC2BD000DC73E8 /* Static */ = {
 			isa = PBXGroup;
 			children = (
+				9635A20522EDA6E90066D5CA /* awsconfiguration.json */,
+				96B410BE22EADF2F00EB900E /* Assets.xcassets */,
+				96B410C322EADF2F00EB900E /* Info.plist */,
 				9649DA5F22EC9D7500481BAA /* fakeData.json */,
 			);
 			path = Static;
@@ -106,9 +111,7 @@
 				96AF25B822EC655E00DC73E8 /* EventCell.swift */,
 				96AF25BA22EC671100DC73E8 /* EventCell.xib */,
 				9649DA5D22EC854200481BAA /* EventDetailViewController.swift */,
-				96B410BE22EADF2F00EB900E /* Assets.xcassets */,
 				96B410C022EADF2F00EB900E /* LaunchScreen.storyboard */,
-				96B410C322EADF2F00EB900E /* Info.plist */,
 				96AF25AF22EC2BD000DC73E8 /* Static */,
 			);
 			path = hero;
@@ -125,7 +128,7 @@
 				96B410B022EADF2E00EB900E /* Sources */,
 				96B410B122EADF2E00EB900E /* Frameworks */,
 				96B410B222EADF2E00EB900E /* Resources */,
-				DEBD199F36B3D2E1A77C79F9 /* [CP] Embed Pods Frameworks */,
+				96BB9D5D5A97A58B236C7E67 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +179,7 @@
 			files = (
 				96B410C222EADF2F00EB900E /* LaunchScreen.storyboard in Resources */,
 				96B410BF22EADF2F00EB900E /* Assets.xcassets in Resources */,
+				9635A20622EDA6E90066D5CA /* awsconfiguration.json in Resources */,
 				96AF25BB22EC671100DC73E8 /* EventCell.xib in Resources */,
 				96B410BD22EADF2E00EB900E /* Main.storyboard in Resources */,
 				9649DA6022EC9D7500481BAA /* fakeData.json in Resources */,
@@ -185,7 +189,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		DEBD199F36B3D2E1A77C79F9 /* [CP] Embed Pods Frameworks */ = {
+		96BB9D5D5A97A58B236C7E67 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

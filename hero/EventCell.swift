@@ -26,7 +26,6 @@ class EventCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-
 	func configure(for event: Event) {
 		if let img = UIImage(named: event.icon) {
 			iconView.image = img

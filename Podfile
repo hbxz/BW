@@ -6,7 +6,6 @@ target 'hero' do
   use_frameworks!
 
   # Pods for hero
-	pod 'Alamofire', '~> 5.0.0-beta.5'
-	pod 'AWSCore', '~> 2.10.0'
+   pod 'AWSCore', '~> 2.10.0'
 
 end
